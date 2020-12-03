@@ -76,23 +76,53 @@ namespace DevTeamConsole
         // Create a new developer
         private void CreateNewDeveloper()
         {
-          Developer dev
+            Developer newDeeloper = new Developer();
+            // DevName
+            Console.WriteLine("Enter the name of the new develoer.");
+            newDeeloper.DevName = Console.ReadLine();
+
+            //DevID
+            Console.WriteLine("Enter the name of the unique DevID.");
+            newDeeloper.DevID = Console.ReadLine();
+
+            // Access to pluralsight
+            Console.WriteLine("Has the developer been give pluralsight access? y/n");
+            string pluralsightAccess = Console.ReadLine().ToLower();
+            if(pluralsightAccess =="y")
+            {
+                newDeeloper.AccessPluralSight = true;
+            }
+            else
+            {
+                newDeeloper.AccessPluralSight = false;
+            }    
 
         }
         private void CreateNewDevTeam()
         {
-            DevTeam devTeam
+            DevTeam newdevTeam = new DevTeam();
+                // TeamName
+                 Console.WriteLine("Enter the name of the ne development team.");
+            newdevTeam.TeamName = Console.ReadLine();
+
+            // NumMembers
+            Console.WriteLine("Please enter the number of team members");
+            newdevTeam.NumMembers = Console.ReadLine();
+
+            // description
+            Console.WriteLine("Please provide a description of the the Development Team.");
+            newdevTeam.Description = Console.ReadLine();
+
+            // SecurityGroup
+            Console.WriteLine("Please enter the security Group.");
+            newdevTeam.SecurityGroup = Console.ReadLine();
+
         }
-        private void CreateNewDevID()
-        {
-            CreateNewDevID
-        }
-        private void ValidatepluralsightAccess()
-        {
-            Plural
+
+        
 
            
-        }
+        
 
 
     }
