@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DevTeamConsole
 {
     class ProgramUI
-    {  
+    {
         // set up fields 
 
 
@@ -48,11 +48,11 @@ namespace DevTeamConsole
 
                     case "2":
                         //Create new DevTeam
-                        CreateNewDevID();
+                        CreateNewDevTeam();
                         break;
                     case "3":
                         // Check access to pluralsight
-                        ValidatepluralsightAccess();
+                        ValidatePluralsightAccess();
                         break;
                     case "4":
                         // Validate DevID
@@ -71,7 +71,7 @@ namespace DevTeamConsole
                 Console.ReadKey();
                 Console.Clear();
             }
-            
+
         }
         // Create a new developer
         private void CreateNewDeveloper()
@@ -85,24 +85,24 @@ namespace DevTeamConsole
             Console.WriteLine("Enter the name of the unique DevID.");
             newDeeloper.DevID = Console.ReadLine();
 
-            // Access to pluralsight
-            Console.WriteLine("Has the developer been give pluralsight access? y/n");
-            string pluralsightAccess = Console.ReadLine().ToLower();
-            if(pluralsightAccess =="y")
-            {
-                newDeeloper.AccessPluralSight = true;
-            }
-            else
-            {
-                newDeeloper.AccessPluralSight = false;
-            }    
+            //// Access to pluralsight
+            //Console.WriteLine("Has the developer been give pluralsight access? y/n");
+            //string pluralsightAccess = Console.ReadLine().ToLower();
+            //if(pluralsightAccess =="y")
+            //{
+            //    newDeeloper.AccessPluralSight = true;
+            //}
+            //else
+            //{
+            //    newDeeloper.AccessPluralSight = false;
+            //}    
 
         }
         private void CreateNewDevTeam()
         {
             DevTeam newdevTeam = new DevTeam();
-                // TeamName
-                 Console.WriteLine("Enter the name of the ne development team.");
+            // TeamName
+            Console.WriteLine("Enter the name of the ne development team.");
             newdevTeam.TeamName = Console.ReadLine();
 
             // NumMembers
@@ -119,10 +119,45 @@ namespace DevTeamConsole
 
         }
 
-        
+        private void ValidatePluralsightAccess()
+        {
+            Developer newDeeloper = new Developer();
+            // Access to pluralsight
+            Console.WriteLine("Has the developer been give pluralsight access? y/n");
+            string pluralsightAccess = Console.ReadLine().ToLower();
+            if (pluralsightAccess == "y")
+            {
+                newDeeloper.AccessPluralSight = true;
+            }
+            else
+            {
+                newDeeloper.AccessPluralSight = false;
+            }
+        }
+        private void CreateNewDevID()
 
-           
-        
+        {
+            Developer newDeeloper = new Developer();
+
+            Console.WriteLine("Enter new DevID number");
+
+            string DevID = Console.ReadLine().ToLower();
+            foreach (Developer.DevID== "devID")
+            {
+                newDeeloper.AccessPluralSight = true;
+            }
+            else
+            {
+                newDeeloper.AccessPluralSight = false;
+            }
+
+        }
+
+
+
+
+
+
 
 
     }
