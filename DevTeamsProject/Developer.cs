@@ -15,18 +15,21 @@ namespace DevTeamsProject
     //}
     public class Developer
     {
-        public string Name { get; set; }
+        //POCO
+        public string DevName { get; set; }
         public string DevID { get; set; }
-        public bool PluralSightAccess { get; set; }
-    }
+        public bool AccessPluralSight { get; set; }
 
-    public Developer() { }
+        public Developer() { }
 
-    public Developer(string name, string devID, bool pluralSightAccess)
-    {
-        Name = name;
-        DevID - devID;
-        PluralSightAccess = pluralSightAccess;
+        public Developer(string devname, string devID,, bool accessPlurlSight)
+        {
+            DevName = devname;
+            DevID = devID;
+            AccessPluralSight = accessPlurlSight;
+
+        }
+
     }
 
 }

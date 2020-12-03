@@ -8,6 +8,21 @@ namespace DevTeamsProject
 {
     public class DevTeam
     {
+        //POCO
+        public string TeamName { get; set; }
+        public string NumMembers { get; set; }
+        public string Description { get; set; }
+        public bool SecurityGroup { get; set; }
+
+        public DevTeam() { }
+
+        public DevTeam(string teamName, string numMembers, string description, bool securityGroup) 
+        {
+            TeamName = teamName;
+            NumMembers = numMembers;
+            Description = description;
+            SecurityGroup = securityGroup;
+        }
 
     }
 }
