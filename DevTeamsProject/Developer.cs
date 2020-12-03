@@ -22,7 +22,7 @@ namespace DevTeamsProject
 
         public Developer() { }
 
-        public Developer(string devname, string devID,, bool accessPlurlSight)
+        public Developer(string devname, string devID, bool accessPlurlSight)
         {
             DevName = devname;
             DevID = devID;

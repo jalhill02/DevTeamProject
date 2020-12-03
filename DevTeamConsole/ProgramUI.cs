@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevTeamsProject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,11 @@ using System.Threading.Tasks;
 namespace DevTeamConsole
 {
     class ProgramUI
-    {   // the method that starts the DevTeams application
+    {  
+        // set up fields 
+
+
+        // the method that starts the DevTeams application
         public void Run()
         {
             Menu();
@@ -71,18 +76,20 @@ namespace DevTeamConsole
         // Create a new developer
         private void CreateNewDeveloper()
         {
+          Developer dev
 
         }
         private void CreateNewDevTeam()
         {
-
+            DevTeam devTeam
         }
         private void CreateNewDevID()
         {
-
+            CreateNewDevID
         }
         private void ValidatepluralsightAccess()
         {
+            Plural
 
            
         }

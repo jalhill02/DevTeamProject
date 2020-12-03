@@ -11,7 +11,7 @@ namespace DevTeamConsole
         static void Main(string[] args)
         {
             ProgramUI program = new ProgramUI();
-            program.Run(program);
+            program.Run();
         }
     }
 }

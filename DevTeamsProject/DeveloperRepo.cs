@@ -23,11 +23,11 @@ namespace DevTeamsProject
         }
         //Developer Update
 
-        public void updateExistingContent(string originalJD, Developer newContent)
+        public void updateExistingContent(string originalID, Developer newContent)
         {
 
             //Find the Developer
-            Developer oldContent = GetContentByDevName(originalName);
+            Developer oldContent = GetContentByDevID(originalID);
 
             //Update the Developer
             if (oldContent != null)
@@ -37,48 +37,50 @@ namespace DevTeamsProject
                 oldContent.AccessPluralSight = newContent.AccessPluralSight;
 
             }
+        }
 
-            //Developer Delete
-            public bool RemoveContentFromList(string devID)
+        //Developer Delete
+        public bool RemoveContentFromList(string devID)
+        {
+
+            Developer content = GetContentByDevID(devID);
+
+
+            if (content == null)
             {
-                
-                Developer content = GetContentByDevID (devID);
-                
+                return false;
+            }
+            int initialCount = _developerDirectory.Count;
+            _developerDirectory.Remove(content);
 
-                    if (content == null)
-                    {
-                        return false;
-                    }
-                    int initialCount = _developerDirectory.Count;
-                    _developerDirectory.Remove(content);
-
-                    if (initialCount > _developerDirectory.Count)
-                    {
-                        return true;
-                    }
-                    else
-                    {
-                        return false;
-                    }
-               
-
+            if (initialCount > _developerDirectory.Count)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
-            //Developer Helper (Get Developer by ID)
+
+        }
+
+        //Developer Helper (Get Developer by ID)
 
 
-            private Developer GetContentBy(string devID)
-            {
-                foreach (Developer content in _developerDirectory) 
-                    if (content.DevID == devID)
-                    {
-                        return content;
-                    }
-
+        private Developer GetContentByDevID(string devID)
+        {
+            foreach (Developer content in _developerDirectory)
+                if (content.DevID == devID)
                 {
-                    return null;
+                    return content;
                 }
 
-
+            {
+                return null;
             }
+
+
         }
+    }
+}
