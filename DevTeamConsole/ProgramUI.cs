@@ -11,27 +11,85 @@ namespace DevTeamConsole
         public void Run()
         {
             Menu();
-               
 
         }
 
         // menu
         private void Menu()
         {
-            Console.WriteLine("Select a menu option\n" +
-                "1. Create new developer\n" +
-                "2. Create new devteam]n" +
-                "3. Check access to Pluralsight\n" +
-                "4. validate unique devID\n" +
-                "5. Exit");
+            bool keepRunning = true;
+            while (keepRunning)
+            {
 
-            //Get the user's input
-            string input -Console.ReadLine();
 
-            // Evaluate the user's input and act accordingly
-            switch ()
+                Console.WriteLine("Select a menu option\n" +
+                    "1. Create new developer\n" +
+                    "2. Create new devteam\n" +
+                    "3. Check access to Pluralsight\n" +
+                    "4. validate unique devID\n" +
+                    "5. Exit");
+
+                //Get the user's input
+                string input = Console.ReadLine();
+
+                // Evaluate the user's input and act accordingly
+                switch (input)
+                {
+
+                    case "1":
+                        //Create new developer
+                        CreateNewDeveloper();
+                        break;
+
+                    case "2":
+                        //Create new DevTeam
+                        CreateNewDevID();
+                        break;
+                    case "3":
+                        // Check access to pluralsight
+                        ValidatepluralsightAccess();
+                        break;
+                    case "4":
+                        // Validate DevID
+                        CreateNewDevID();
+                        break;
+                    case "5":
+                        // Exit
+                        Console.WriteLine("Goodbye");
+                        keepRunning = false;
+                        break;
+                    default:
+                        Console.WriteLine("Please enter a valid number.");
+                        break;
+                }
+                Console.WriteLine("Please press any key to continue...");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            
         }
+        // Create a new developer
+        private void CreateNewDeveloper()
+        {
+
+        }
+        private void CreateNewDevTeam()
+        {
+
+        }
+        private void CreateNewDevID()
+        {
+
+        }
+        private void ValidatepluralsightAccess()
+        {
+
+           
+        }
+
+
     }
+
 
 
 }
